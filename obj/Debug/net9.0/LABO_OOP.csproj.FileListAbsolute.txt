@@ -1,0 +1,14 @@
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/bin/Debug/net9.0/LABO_OOP
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/bin/Debug/net9.0/LABO_OOP.deps.json
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/bin/Debug/net9.0/LABO_OOP.runtimeconfig.json
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/bin/Debug/net9.0/LABO_OOP.dll
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/bin/Debug/net9.0/LABO_OOP.pdb
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/LABO_OOP.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/LABO_OOP.AssemblyInfoInputs.cache
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/LABO_OOP.AssemblyInfo.cs
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/LABO_OOP.csproj.CoreCompileInputs.cache
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/LABO_OOP.dll
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/refint/LABO_OOP.dll
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/LABO_OOP.pdb
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/LABO_OOP.genruntimeconfig.cache
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/ref/LABO_OOP.dll
