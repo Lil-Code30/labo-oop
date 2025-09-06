@@ -29,8 +29,8 @@ void Exercise1()
 
 // Exercise1();
 /*
- *2. Créer un programme qui demande le montant total gagné, le nombre de personne qui
-   ont gagné ce montant et affiche le montant gagné par chaque personne (pas plus que 4
+ *2. Créer un programme qui demande le montant total gagné, le nombre de personnes qui
+   ont gagné ce montant et affiche le montant gagné par chaque personne (pas plus que QUATRE
    décimales après la virgule).
  * 
  */
@@ -48,13 +48,253 @@ void Exercise2()
   int nOfPersons = int.Parse(Console.ReadLine());
 
   float amountPerPerson = montant / nOfPersons;
-  
-  Console.WriteLine($"Chaque personne ont gagné : {amountPerPerson.ToString("0.0000)}");
+
+  Console.WriteLine($"Chaque personne ont gagné : {amountPerPerson:0.00}");
 }
 
-Exercise2();
+// Exercise2();
 
 /*
- *3. Créer un programme qui demande la longueur et la largeur d’un rectangle et affiche son périmètre et sa surface.
+ * 3. Créer un programme qui demande la longueur et la largeur d’un rectangle et affiche son périmètre et sa surface.
  * 
  */
+void Exercise3()
+{
+ 
+  Console.WriteLine("Entrez la longeur du rectangle : ");
+  float longueur = Convert.ToSingle(Console.ReadLine());
+  
+  Console.WriteLine("Entrez la largeur du rectangle : ");
+  float largeur = Convert.ToSingle(Console.ReadLine());
+
+  float perimeter = 2 * (largeur + longueur);
+  float surface = largeur * longueur;
+  
+  Console.WriteLine($"Le perimeter du rectangle avec comme largeur {largeur} et longeur {longueur}  : {perimeter}, Surface : {surface}");
+}
+
+// Exercise3();
+
+/*
+ * 4.
+Créer un programme qui demande le montant gagné par mois et affiche le montant gagné par année sachant que la taxe annuelle est de 35%.
+ */
+
+void Exercise4()
+{
+  /*
+   * montant par mois Brut = 3000
+   * montant total (Net) =  3000 * 12 
+   * 
+   * nombre de mois = 12
+   * % taxe = 35%
+   * taxe annuelle = 35% * montant total
+   * Salaire annuelle = montant total - taxe annuelle 
+   */
+  const double tax = 0.35;
+  const int moisTotal = 12;
+  
+  Console.WriteLine("Entrez le montant gagné par mois : ");
+  float montant = Convert.ToSingle(Console.ReadLine());
+  
+  double taxAnnuelle = montant * tax;
+
+  double salaireBrut = montant * moisTotal;
+  
+  double salaireNet = salaireBrut - taxAnnuelle;
+
+  Console.WriteLine($"Votre salaire Net gagné par année est de : {salaireNet:C2}");
+  // Console.WriteLine("Votre salaire Net gagné par année est de : " + salaireNet.ToString("C2") );
+}
+
+// Exercise4();
+
+/*
+ *5. Créer un programme qui demande deux nombres x et y et affiche : x+y, x-y, x*y, x/y, x%y (modulo) et x^y
+ */
+
+void Exercise5()
+{
+  Console.WriteLine("Entrez un nombre : ");
+  int num1 = Convert.ToInt32(Console.ReadLine());
+  
+  Console.WriteLine("Entrez un autre nombre : ");
+  int num2 = Convert.ToInt32(Console.ReadLine());
+  
+ // Operations
+ 
+ int sum = num1 + num2;
+ int diff = num1 - num2;
+ int product = num1 * num2;
+ int division = num1 / num2;  
+ int modulo  = num1 % num2;
+ double power = Math.Pow(num1, num2);
+ 
+ Console.WriteLine("Operation.");
+ Console.WriteLine($"{num1} + {num2} = {sum}");
+ Console.WriteLine($"{num1} - {num2} = {diff}");
+ Console.WriteLine($"{num1} * {num2} = {product}");
+ Console.WriteLine($"{num1} / {num2} = {division}");
+ Console.WriteLine($"{num1} modulo {num2} = {modulo}");
+ Console.WriteLine($"{num1} ^ {num2} = {power}");
+}
+
+// Exercise5(); 
+
+/*
+ *6. Créer un programme qui prend la moyenne d’un étudiant (/20) et affiche ‘réussite’ si la note est supérieure ou égale à 10
+ * 
+ */
+
+void Exercise6()
+{
+  Console.WriteLine("Entrez votre moyenne (moyenne/20) : ");
+  int moyenne = Convert.ToInt32(Console.ReadLine());
+
+  if (moyenne >= 10)
+  {
+    Console.WriteLine("Réussite :)");
+  }
+}
+
+// Exercise6(); 
+/*
+ * 7. Modifier le programme précédent pour qu’il affiche ‘Échec’ dans le cas où la moyenne est inférieure à 10.
+ */
+void Exercise7()
+{
+  Console.WriteLine("Entrez votre moyenne (moyenne/20) : ");
+  int moyenne = Convert.ToInt32(Console.ReadLine());
+
+  if (moyenne >= 10)
+  {
+    Console.WriteLine("Réussite :)");
+  }
+  else
+  {
+    Console.WriteLine("Échec :(");
+  }
+}
+
+// Exercise7(); 
+
+
+/*
+ * 8. Créer un programme qui demande un chiffre(0 à 9) et affiche le chiffre en lettre. Si la valeur entrée n’est pas entre 0 et 9, afficher ‘pas entre 0 et 9’.
+ */
+void Exercise8()
+{
+  Console.WriteLine("Entrez un chiffre entre 0 et 9.");
+  int chiffre = Convert.ToInt32(Console.ReadLine());
+
+  switch (chiffre )
+  {
+    case 0:
+      Console.WriteLine("Zero");
+      break;
+    case 1:
+      Console.WriteLine("Un");
+      break;
+    case 2:
+      Console.WriteLine("Deux");
+      break;
+    case 3:
+      Console.WriteLine("Trois");
+      break;
+    case 4:
+      Console.WriteLine("Quatre");
+      break;
+    case 5:
+      Console.WriteLine("Cinq");
+      break;
+    case 6:
+      Console.WriteLine("Six");
+      break;
+    case 7:
+      Console.WriteLine("Sept");
+      break;
+    case 8:
+      Console.WriteLine("Huit");
+      break;
+    case 9:
+      Console.WriteLine("Neuf");
+      break;
+    default:
+      Console.WriteLine("pas entre 0 et 9");
+      break;
+  }
+}
+
+// Exercise8();
+
+/*
+ * 9. Afficher : -12 | -9 | -6 | -3 | 0 | 3 | 6 | … | 300
+ */
+void Exercise9()
+{
+  for (int i = -12; i <= 300; i++)
+  {
+    string output = i ==  300 ? $"{i}" : $"{i} | ";
+    Console.Write(output);
+  }
+  
+}
+
+// Exercise9();
+
+/*
+ * 10. Créer un programme qui prend un caractère, l’affiche 100 fois et demande à l’utilisateur s’il veut le même affichage à nouveau jusqu’à ce que l’utilisateur rentre ‘N’
+ */
+
+void Exercise10()
+{
+  
+  Console.WriteLine("Entrez un caractère : ");
+  string caractere = Console.ReadLine();
+  char reponse ;
+  
+  do
+  {
+    for (int i = 1; i <= 100; i++)
+    {
+      Console.WriteLine($"{i}. {caractere}");
+    }
+  
+    Console.Write("Continue le même affichage ? Oui (O) ou Non (N) : ");
+    reponse = Convert.ToChar(Console.ReadLine());
+  } while (Char.ToUpper(reponse) != 'N');
+  
+}
+
+// Exercise10();
+
+/*
+ * 11. Soit une histoire composée de 10 lignes. Créer un programme qui permet à l’utilisateur de lire l’histoire ligne par ligne en tapant ‘espace’
+ * et de ne pas la lire ou quitter avant de la terminer si la touche enfoncée est différente de ‘espace’.
+ */
+
+// void Exercise11()
+// {
+//   Console.WriteLine("Il était une fois un petit chat nommé Minou, qui vivait dans un village paisible.");
+//   var keyInfo = Console.ReadKey();  // keyInfo.Key
+//   if (keyInfo.Key == ConsoleKey.Spacebar)
+//   {
+//     Console.WriteLine("Chaque matin, il courait dans les champs pour chasser les papillons.");
+//     Console.WriteLine("Un jour, il aperçut une étrange lumière au sommet de la colline.");
+//     Console.WriteLine("Curieux, il grimpa et découvrit une vieille boîte en bois.");
+//     Console.WriteLine("La boîte était fermée par un cadenas rouillé, mais Minou réussit à l’ouvrir.");
+//     Console.WriteLine("À l’intérieur, il trouva une pierre brillante qui semblait magique.");
+//     Console.WriteLine("Dès qu’il la toucha, Minou se sentit léger comme une plume.");
+//     Console.WriteLine("Il pouvait maintenant sauter très haut et courir plus vite que le vent.");
+//     Console.WriteLine("Heureux, il retourna au village pour partager sa découverte avec ses amis.");
+//     Console.WriteLine("Depuis ce jour, Minou devint le chat le plus courageux et aventurier du village.");
+//   }
+//   else
+//   {
+//    Console.ReadLine();
+//   }
+//  
+//   
+// }
+//
+// Exercise11();

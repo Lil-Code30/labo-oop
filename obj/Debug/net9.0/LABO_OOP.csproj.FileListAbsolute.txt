@@ -12,3 +12,4 @@
 /Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/LABO_OOP.pdb
 /Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/LABO_OOP.genruntimeconfig.cache
 /Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/ref/LABO_OOP.dll
+/Users/ismaelloko/Desktop/Workstation/C#/LABO_OOP/obj/Debug/net9.0/LABO_OOP.sourcelink.json
