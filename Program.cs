@@ -1,9 +1,9 @@
-﻿/*
+﻿using LABO_OOP;
+
+/*
  *1. Créer un programme qui demande à un étudiant (âge moins de 20 ans) son nom, puis
    son prénom et après l’année de sa naissance et affiche un écran qui ne contient qu’une
    ligne avec le nom, le prénom et l’âge de l’utilisateur
- *
- * 
  */
  
 void Exercise1()
@@ -26,6 +26,7 @@ void Exercise1()
     Console.WriteLine($"{firstName} {lastName} a {userAge} years old");
   }
 }
+
 
 // Exercise1();
 /*
@@ -60,10 +61,9 @@ void Exercise2()
  */
 void Exercise3()
 {
- 
+
   Console.WriteLine("Entrez la longeur du rectangle : ");
   float longueur = Convert.ToSingle(Console.ReadLine());
-  
   Console.WriteLine("Entrez la largeur du rectangle : ");
   float largeur = Convert.ToSingle(Console.ReadLine());
 
@@ -273,28 +273,25 @@ void Exercise10()
  * et de ne pas la lire ou quitter avant de la terminer si la touche enfoncée est différente de ‘espace’.
  */
 
-// void Exercise11()
-// {
-//   Console.WriteLine("Il était une fois un petit chat nommé Minou, qui vivait dans un village paisible.");
-//   var keyInfo = Console.ReadKey();  // keyInfo.Key
-//   if (keyInfo.Key == ConsoleKey.Spacebar)
-//   {
-//     Console.WriteLine("Chaque matin, il courait dans les champs pour chasser les papillons.");
-//     Console.WriteLine("Un jour, il aperçut une étrange lumière au sommet de la colline.");
-//     Console.WriteLine("Curieux, il grimpa et découvrit une vieille boîte en bois.");
-//     Console.WriteLine("La boîte était fermée par un cadenas rouillé, mais Minou réussit à l’ouvrir.");
-//     Console.WriteLine("À l’intérieur, il trouva une pierre brillante qui semblait magique.");
-//     Console.WriteLine("Dès qu’il la toucha, Minou se sentit léger comme une plume.");
-//     Console.WriteLine("Il pouvait maintenant sauter très haut et courir plus vite que le vent.");
-//     Console.WriteLine("Heureux, il retourna au village pour partager sa découverte avec ses amis.");
-//     Console.WriteLine("Depuis ce jour, Minou devint le chat le plus courageux et aventurier du village.");
-//   }
-//   else
-//   {
-//    Console.ReadLine();
-//   }
-//  
-//   
-// }
-//
-// Exercise11();
+void Exercise11()
+{
+
+  string[] ligne = ["Chaque matin, il courait dans les champs pour chasser les papillons.","Un jour, il aperçutt de la co une étrange lumière au sommelline.", "Curieux, il grimpa et découvrit une vieille boîte en bois.", "La boîte était fermée par un cadenas rouillé, mais Minou réussit à l’ouvrir.", "À l’intérieur, il trouva une pierre brillante qui semblait magique.", "Dès qu’il la toucha, Minou se sentit léger comme une plume.", "Il pouvait maintenant sauter très haut et courir plus vite que le vent.", "Heureux, il retourna au village pour partager sa découverte avec ses amis.", "Depuis ce jour, Minou devint le chat le plus courageux et aventurier du village."];
+  ConsoleKeyInfo space;
+  for (int i = 0; i < ligne.Length; i++)
+  {
+    Console.WriteLine(ligne[i]);
+
+    do
+    {
+       space = Console.ReadKey(true);
+      
+    }while(space.Key != ConsoleKey.Spacebar);
+  }
+}
+
+
+
+
+Exercise11();
+
