@@ -1,4 +1,4 @@
-﻿using LABO_OOP;
+﻿
 
 /*
  *1. Créer un programme qui demande à un étudiant (âge moins de 20 ans) son nom, puis
@@ -293,5 +293,119 @@ void Exercise11()
 
 
 
-Exercise11();
+// Exercise11();
 
+
+void printTriangle()
+{
+  for (int j = 20; j < 0; j--)
+  {
+    for (int i = 0; i < j; i++)
+    {
+      Console.Write("*");
+    }
+    Console.WriteLine();
+  }
+  
+  for (int j = 0; j < 20; j++)
+  {
+    for (int i = 20; i < j; i++)
+    {
+      Console.Write("*");
+    }
+    Console.WriteLine();
+  }
+}
+
+// printTriangle();
+
+/*
+ * Créer un programme qui permet de saisir 5 pays et de les
+  afficher dans l’ordre inverse de celui de la saisie.
+ */
+void InverseCountry()
+{
+  string[] lesPays = new string[5];
+  {
+    for (int i = 0; i <= 4; i++)
+    {
+      Console.Write($"Saisir le pays {i + 1}");
+      lesPays[i] = Console.ReadLine();
+    }
+
+    Console.WriteLine("Les pays son les pays");
+    for (int i = 4; i >= 0; i--)
+    {
+      Console.WriteLine(lesPays[i]);
+    }
+  }
+}
+
+/*5. Write a C# Sharp program in to count duplicate elements in an array.
+   Test Data :
+   Input the number of elements to be stored in the array :3
+   Input 3 elements in the array :
+   element - 0 : 5
+   element - 1 : 1
+   element - 2 : 1
+   Expected Output :
+   Total number of duplicate elements found in the array is : 1*/
+
+void countDuplicates()
+{
+  
+  Console.Write("Input the number of elements to be stored in the array");
+  
+  int[] numArray = [3,4,4,3,2,4,6,0,2];
+  
+  Console.Write("Enter a number: ");
+  int num = int.Parse(Console.ReadLine());
+  
+  int count = 0;
+
+  for (int i = 0; i < numArray.Length; i++)
+  {
+    if (numArray[i] == num)
+    {
+      count++;
+    }
+    
+  }
+  
+  Console.WriteLine("Number of elements duplicated: " + count);
+}
+// countDuplicates();
+
+void InsertACharater()
+{
+  string chaine = "Bonjour";
+  
+  // insert '123' before n
+
+  Console.Write("Input the chaine: ");
+  string chaine1 = Console.ReadLine();
+
+  int index;
+  do
+  {
+    Console.Write("Input an index: ");
+    index = int.Parse(Console.ReadLine());
+  }while(index < 0 || index >= chaine.Length);
+  
+
+  string chaine2 = "";
+  
+  for (int i = 0; i < chaine.Length; i++)
+  {
+    if (i == index)
+    {
+      chaine2 += chaine1;
+    } 
+    chaine2 += chaine[i];
+  }
+  Console.Write("Input an index: " + chaine2);
+  
+  
+}
+
+InsertACharater();
