@@ -408,7 +408,7 @@ void InsertACharater()
   
 }
 
-InsertACharater();
+// InsertACharater();
 
 
 ///Prendre 2 nombres, l’opération : -, +, *, /, % ou p (ab)
@@ -421,30 +421,39 @@ void Ex0Serie0201()
   Console.Write("Enter the second number: ");
   int num2 = Int32.Parse(Console.ReadLine());
   
-  // -, +, *, /, % ou p
-  char[] operationList = ['-', '+', '*', '/', '%', 'p']
-  
   Console.Write("Choose an operation from this list [-, +, *, /, % or p]: ");
-  char operation = Console.ReadLine();
+  char operation = Convert.ToChar(Console.ReadLine());
   
-  isValidOperation = operationList.Contains(operation);
-
-  if (isValidOperation)
-  {
-    if (operation == 'p')
+    switch (operation)
     {
-      Console.WriteLine($"{Math.Pow(num1, num2)}")
+      case '-':
+        Console.WriteLine($"{num1} -  {num2} = {num1 - num2}");
+        break;
+      case '+':
+        Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
+        break;
+      case '*':
+        Console.WriteLine($"{num1} * {num2} = {num1 * num2}");
+        break;
+      case '/':
+        if (num2 == 0)
+        {
+          Console.WriteLine("Division by zero is not allowed");
+          return;
+        }
+        Console.WriteLine($"{num1} /  {num2} = {num1 / num2}");
+        break;
+      case '%':
+        Console.WriteLine($"{num1} modulo  {num2} = {num1 % num2}");
+        break;
+      case 'p':
+        Console.WriteLine($"{num1}^{num2} = {Math.Pow(num1, num2)}");
+        break;
+      default:
+        Console.WriteLine($"{operation} is not an operation from the list mention above.");
+        break;
     }
-    else
-    {
-      Console.WriteLine(num1 operation num2);
-    }
-    
-  }
-  else
-  {
-    Console.WriteLine($"{operation} is not an operation from the list mention above.")
-  }
+  
 }
 
 Ex0Serie0201();
