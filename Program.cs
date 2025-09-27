@@ -411,7 +411,7 @@ void InsertACharater()
 // InsertACharater();
 
 
-///Prendre 2 nombres, l’opération : -, +, *, /, % ou p (ab)
+///1. Prendre 2 nombres, l’opération : -, +, *, /, % ou p (ab)
 /// (pour les autres caractères afficher: pas une opération valide) et afficher le résultat.
 void Ex0Serie0201()
 {
@@ -456,4 +456,33 @@ void Ex0Serie0201()
   
 }
 
-Ex0Serie0201();
+// Ex0Serie0201();
+
+
+// 2. Prendre des prix d’achats et afficher le "min" et son ordre de saisi.
+void ExoSerie0202()
+{
+  Console.Write("Enter the number of price to input: " );
+  int n =  Int32.Parse(Console.ReadLine());
+  int[] priceArr = new int[n];
+
+  for (int i = 0; i < n; i++)
+  {
+    Console.Write("Enter price: "); 
+    priceArr[i] = Int32.Parse(Console.ReadLine());
+  }
+
+  int smallPrice = priceArr[0];
+  for (int i = 0; i < n; i++)
+  {
+    if (priceArr[i] < smallPrice)
+    {
+      smallPrice = priceArr[i];
+    }
+  }
+  
+  Console.WriteLine($" The Smallest price is {smallPrice} and it was entered at position {Array.IndexOf(priceArr, smallPrice) + 1}.");
+}
+
+
+// ExoSerie0202();
