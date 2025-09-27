@@ -409,3 +409,42 @@ void InsertACharater()
 }
 
 InsertACharater();
+
+
+///Prendre 2 nombres, l’opération : -, +, *, /, % ou p (ab)
+/// (pour les autres caractères afficher: pas une opération valide) et afficher le résultat.
+void Ex0Serie0201()
+{
+  Console.Write("Enter the first number: ");
+  int num1 = Int32.Parse(Console.ReadLine());
+  
+  Console.Write("Enter the second number: ");
+  int num2 = Int32.Parse(Console.ReadLine());
+  
+  // -, +, *, /, % ou p
+  char[] operationList = ['-', '+', '*', '/', '%', 'p']
+  
+  Console.Write("Choose an operation from this list [-, +, *, /, % or p]: ");
+  char operation = Console.ReadLine();
+  
+  isValidOperation = operationList.Contains(operation);
+
+  if (isValidOperation)
+  {
+    if (operation == 'p')
+    {
+      Console.WriteLine($"{Math.Pow(num1, num2)}")
+    }
+    else
+    {
+      Console.WriteLine(num1 operation num2);
+    }
+    
+  }
+  else
+  {
+    Console.WriteLine($"{operation} is not an operation from the list mention above.")
+  }
+}
+
+Ex0Serie0201();
