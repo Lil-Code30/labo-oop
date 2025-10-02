@@ -472,11 +472,32 @@ public static void ExoSerie0202()
   Console.WriteLine($" The Smallest price is {smallPrice} and it was entered at position {Array.IndexOf(priceArr, smallPrice) + 1}.");
 }
 
+// 3. Prendre une chaîne de caractères puis un caractère et supprimer toutes ses apparitions dans la chaîne.
+public static void ExoSerie0203()
+{
+  Console.Write("Enter a string of characters: ");
+  string chaine1 = Console.ReadLine();
+  string chaine2 = "";
+  
+  Console.Write("Enter a character to be removed from the list of characters above: ");
+  char c = Convert.ToChar(Console.ReadLine());
 
-// ExoSerie0202();
+  foreach (char k in chaine1)
+  {
+    if (k != c)
+    {
+      chaine2 += k;
+    }
+  }
+  
+  Console.WriteLine($"Intitial chaine: {chaine1}");
+  Console.WriteLine("=============================");
+  Console.WriteLine($"After removing {c} we have: {chaine2}");
+}
+
   public static void Main(string[] args)
   {
-    
+    ExoSerie0203();
   }
 }
 
