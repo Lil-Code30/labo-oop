@@ -495,6 +495,21 @@ public static void ExoSerie0203()
   Console.WriteLine($"After removing {c} we have: {chaine2}");
 }
 
+// 4. Prendre n entiers, entier par entier tout en gardant votre structure de données triée (tri décroissant) en tout temps.
+  public static void ExoSerie0204()
+  {
+    
+  }
+
+  
+  public static void AfficherTableau(int[] Tableau)
+  {
+    Console.Write("[ ");
+    for (int i = 0; i < Tableau.Length; i++) {
+      Console.Write($"{Tableau[i]}, " );
+    }
+    Console.Write("\b \b]\n");
+  }
   public static void Main(string[] args)
   {
     ExoSerie0203();
