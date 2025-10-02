@@ -1,42 +1,40 @@
 ﻿
-
-/*
- *1. Créer un programme qui demande à un étudiant (âge moins de 20 ans) son nom, puis
+class Program
+{
+  /* 1. Créer un programme qui demande à un étudiant (âge moins de 20 ans) son nom, puis
    son prénom et après l’année de sa naissance et affiche un écran qui ne contient qu’une
    ligne avec le nom, le prénom et l’âge de l’utilisateur
  */
  
-void Exercise1()
-{
-  Console.WriteLine("Exercise 1");
-  Console.WriteLine("Entrez votre nom : ");
-  string firstName = Console.ReadLine();
-  
-  Console.WriteLine("Entrez votre prenom : ");
-  string lastName = Console.ReadLine();
-  
-  Console.WriteLine("Entrez votre anne de naissance : ");
-  int dateOfBirth = int.Parse(Console.ReadLine());
-  int currentYear = DateTime.Now.Year;
-  
-  int userAge = currentYear - dateOfBirth;
-
-  if (userAge < 20)
+  public static void Exercise1()
   {
-    Console.WriteLine($"{firstName} {lastName} a {userAge} years old");
+    Console.WriteLine("Exercise 1");
+    Console.WriteLine("Entrez votre nom : ");
+    string firstName = Console.ReadLine();
+  
+    Console.WriteLine("Entrez votre prenom : ");
+    string lastName = Console.ReadLine();
+  
+    Console.WriteLine("Entrez votre anne de naissance : ");
+    int dateOfBirth = int.Parse(Console.ReadLine());
+    int currentYear = DateTime.Now.Year;
+  
+    int userAge = currentYear - dateOfBirth;
+
+    if (userAge < 20)
+    {
+      Console.WriteLine($"{firstName} {lastName} a {userAge} years old");
+    }
   }
-}
 
-
-// Exercise1();
-/*
+  /*
  *2. Créer un programme qui demande le montant total gagné, le nombre de personnes qui
    ont gagné ce montant et affiche le montant gagné par chaque personne (pas plus que QUATRE
    décimales après la virgule).
  * 
  */
 
-void Exercise2()
+public static void Exercise2()
 {
   Console.WriteLine("Exercise 2");
   Console.WriteLine(
@@ -53,13 +51,13 @@ void Exercise2()
   Console.WriteLine($"Chaque personne ont gagné : {amountPerPerson:0.00}");
 }
 
-// Exercise2();
+
 
 /*
  * 3. Créer un programme qui demande la longueur et la largeur d’un rectangle et affiche son périmètre et sa surface.
  * 
  */
-void Exercise3()
+public static void Exercise3()
 {
 
   Console.WriteLine("Entrez la longeur du rectangle : ");
@@ -73,14 +71,14 @@ void Exercise3()
   Console.WriteLine($"Le perimeter du rectangle avec comme largeur {largeur} et longeur {longueur}  : {perimeter}, Surface : {surface}");
 }
 
-// Exercise3();
+
 
 /*
  * 4.
 Créer un programme qui demande le montant gagné par mois et affiche le montant gagné par année sachant que la taxe annuelle est de 35%.
  */
 
-void Exercise4()
+public static void Exercise4()
 {
   /*
    * montant par mois Brut = 3000
@@ -107,13 +105,13 @@ void Exercise4()
   // Console.WriteLine("Votre salaire Net gagné par année est de : " + salaireNet.ToString("C2") );
 }
 
-// Exercise4();
+
 
 /*
  *5. Créer un programme qui demande deux nombres x et y et affiche : x+y, x-y, x*y, x/y, x%y (modulo) et x^y
  */
 
-void Exercise5()
+public static void Exercise5()
 {
   Console.WriteLine("Entrez un nombre : ");
   int num1 = Convert.ToInt32(Console.ReadLine());
@@ -139,14 +137,14 @@ void Exercise5()
  Console.WriteLine($"{num1} ^ {num2} = {power}");
 }
 
-// Exercise5(); 
+
 
 /*
  *6. Créer un programme qui prend la moyenne d’un étudiant (/20) et affiche ‘réussite’ si la note est supérieure ou égale à 10
  * 
  */
 
-void Exercise6()
+public static void Exercise6()
 {
   Console.WriteLine("Entrez votre moyenne (moyenne/20) : ");
   int moyenne = Convert.ToInt32(Console.ReadLine());
@@ -157,11 +155,11 @@ void Exercise6()
   }
 }
 
-// Exercise6(); 
+
 /*
  * 7. Modifier le programme précédent pour qu’il affiche ‘Échec’ dans le cas où la moyenne est inférieure à 10.
  */
-void Exercise7()
+public static void Exercise7()
 {
   Console.WriteLine("Entrez votre moyenne (moyenne/20) : ");
   int moyenne = Convert.ToInt32(Console.ReadLine());
@@ -176,13 +174,12 @@ void Exercise7()
   }
 }
 
-// Exercise7(); 
 
 
 /*
  * 8. Créer un programme qui demande un chiffre(0 à 9) et affiche le chiffre en lettre. Si la valeur entrée n’est pas entre 0 et 9, afficher ‘pas entre 0 et 9’.
  */
-void Exercise8()
+public static void Exercise8()
 {
   Console.WriteLine("Entrez un chiffre entre 0 et 9.");
   int chiffre = Convert.ToInt32(Console.ReadLine());
@@ -225,12 +222,12 @@ void Exercise8()
   }
 }
 
-// Exercise8();
+
 
 /*
  * 9. Afficher : -12 | -9 | -6 | -3 | 0 | 3 | 6 | … | 300
  */
-void Exercise9()
+public static void Exercise9()
 {
   for (int i = -12; i <= 300; i++)
   {
@@ -240,13 +237,12 @@ void Exercise9()
   
 }
 
-// Exercise9();
 
 /*
  * 10. Créer un programme qui prend un caractère, l’affiche 100 fois et demande à l’utilisateur s’il veut le même affichage à nouveau jusqu’à ce que l’utilisateur rentre ‘N’
  */
 
-void Exercise10()
+public static void Exercise10()
 {
   
   Console.WriteLine("Entrez un caractère : ");
@@ -266,14 +262,13 @@ void Exercise10()
   
 }
 
-// Exercise10();
 
 /*
  * 11. Soit une histoire composée de 10 lignes. Créer un programme qui permet à l’utilisateur de lire l’histoire ligne par ligne en tapant ‘espace’
  * et de ne pas la lire ou quitter avant de la terminer si la touche enfoncée est différente de ‘espace’.
  */
 
-void Exercise11()
+public static void Exercise11()
 {
 
   string[] ligne = ["Chaque matin, il courait dans les champs pour chasser les papillons.","Un jour, il aperçutt de la co une étrange lumière au sommelline.", "Curieux, il grimpa et découvrit une vieille boîte en bois.", "La boîte était fermée par un cadenas rouillé, mais Minou réussit à l’ouvrir.", "À l’intérieur, il trouva une pierre brillante qui semblait magique.", "Dès qu’il la toucha, Minou se sentit léger comme une plume.", "Il pouvait maintenant sauter très haut et courir plus vite que le vent.", "Heureux, il retourna au village pour partager sa découverte avec ses amis.", "Depuis ce jour, Minou devint le chat le plus courageux et aventurier du village."];
@@ -292,11 +287,7 @@ void Exercise11()
 
 
 
-
-// Exercise11();
-
-
-void printTriangle()
+public static void printTriangle()
 {
   for (int j = 20; j < 0; j--)
   {
@@ -317,13 +308,12 @@ void printTriangle()
   }
 }
 
-// printTriangle();
 
 /*
  * Créer un programme qui permet de saisir 5 pays et de les
   afficher dans l’ordre inverse de celui de la saisie.
  */
-void InverseCountry()
+public static void InverseCountry()
 {
   string[] lesPays = new string[5];
   {
@@ -351,7 +341,7 @@ void InverseCountry()
    Expected Output :
    Total number of duplicate elements found in the array is : 1*/
 
-void countDuplicates()
+public static void countDuplicates()
 {
   
   Console.Write("Input the number of elements to be stored in the array");
@@ -374,9 +364,9 @@ void countDuplicates()
   
   Console.WriteLine("Number of elements duplicated: " + count);
 }
-// countDuplicates();
 
-void InsertACharater()
+
+public static void InsertACharater()
 {
   string chaine = "Bonjour";
   
@@ -413,7 +403,7 @@ void InsertACharater()
 
 ///1. Prendre 2 nombres, l’opération : -, +, *, /, % ou p (ab)
 /// (pour les autres caractères afficher: pas une opération valide) et afficher le résultat.
-void Ex0Serie0201()
+public static void Ex0Serie0201()
 {
   Console.Write("Enter the first number: ");
   int num1 = Int32.Parse(Console.ReadLine());
@@ -456,11 +446,9 @@ void Ex0Serie0201()
   
 }
 
-// Ex0Serie0201();
-
 
 // 2. Prendre des prix d’achats et afficher le "min" et son ordre de saisi.
-void ExoSerie0202()
+public static void ExoSerie0202()
 {
   Console.Write("Enter the number of price to input: " );
   int n =  Int32.Parse(Console.ReadLine());
@@ -486,3 +474,14 @@ void ExoSerie0202()
 
 
 // ExoSerie0202();
+  public static void Main(string[] args)
+  {
+    
+  }
+}
+
+
+
+
+
+
